@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Field</title>
+</head>
+
+<body>
+<fieldset style="width:400px; margin: auto;">
+    <legend>Field</legend>
+    <input type="text" id="name" placeholder="name" onblur="validateField()">
+    <p id="nameMessage" style="display: inline;"></p>
+</fieldset>
+<script>
+    function validateField() {
+        var name = document.getElementById("name").value;
+        if (name == null || name == "") {
+            document.getElementById("nameMessage").innerHTML = "name is invalid";
+        } else {
+            document.getElementById("nameMessage").innerHTML = "name is valid";
+        }
+    }
+</script>
+
+</body>
+</html>
