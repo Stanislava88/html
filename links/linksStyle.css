@@ -1,0 +1,27 @@
+body {
+    background-color: azure;
+}
+
+ul {
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+li {
+    background-color: darkgray;
+    border-style: outset;
+    border-color: lightgrey;
+    text-align: center;
+    display: inline;
+    float: left;
+    font-size: 20px;
+}
+
+li:hover {
+    border-style: inset;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
