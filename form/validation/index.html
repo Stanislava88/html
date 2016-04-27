@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="formValidation.js"></script>
+</head>
+<body>
+<form class="form-horizontal" style="margin-top: 20px;" onsubmit="return formValid;">
+
+    <div class="form-group has-feedback" id="firstNameGroup">
+
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user custom">*</i></span>
+                <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp"
+                       placeholder="First name">
+            </div>
+            <span id="firstNameHelp" class="help-block" style="display: none;">First name must be between 1 and 15 long with chars only</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="lastNameGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-group custom">*</i></span>
+                <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp"
+                       placeholder="Last name">
+            </div>
+            <span id="lastNameHelp" class="help-block" style="display: none;">Last name must be between 1 and 15 long with chars only</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="emailGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-at custom" style="font-size: 20px;"></i></span>
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                       placeholder="Email">
+            </div>
+            <span id="emailHelp" class="help-block" style="display: none;">email must contain only letter and digits, plus mandatory "@" and "."</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="phoneGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile custom" style="font-size: 20px;"></i></span>
+                <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp"
+                       placeholder="Phone Number">
+            </div>
+            <span id="phoneHelp" class="help-block" style="display: none;">Mobile phone number must be 10 digits</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="egnGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-credit-card custom">*</i></span>
+                <input type="text" class="form-control" id="egn" aria-describedby="egnHelp"
+                       placeholder="EGN">
+            </div>
+            <span id="egnHelp" class="help-block" style="display: none;">Egn must be exactly 10 digits</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="ageGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar custom">*</i></span>
+                <input type="text" class="form-control" id="age" aria-describedby="ageHelp"
+                       placeholder="Age">
+            </div>
+            <span id="ageHelp" class="help-block" style="display: none;">Age must be between 18 and 118</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="addressGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-map-marker custom" style="font-size: 20px;">*</i></span>
+                <input type="text" class="form-control" id="address" aria-describedby="addressHelp"
+                       placeholder="Address">
+            </div>
+            <span id="addressHelp" class="help-block" style="display: none;">Address must be from 1 to 100 symbols long
+                (allowed characters, digits and spaces)</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="passwordGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-keyboard-o custom">*</i></span>
+                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp"
+                       placeholder="Password">
+            </div>
+            <span id="passwordHelp" class="help-block" style="display: none;">Password must be from digits and letters only,
+            and between 6 and 18 symbols long</span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" id="confirmPasswordGroup">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-key custom">*</i></span>
+                <input type="password" class="form-control" id="confirmPassword" aria-describedby="confirmPasswordHelp"
+                       placeholder="Confirm password">
+            </div>
+            <span id="confirmPasswordHelp" class="help-block" style="display: none;">Passwords don't match</span>
+
+        </div>
+    </div>
+    <div class="col-sm-offset-4 col-sm-4">
+        <span class="help-block">*-mandatory</span>
+        <button type="submit" class="btn btn-default" onclick="validateForm()">Submit
+        </button>
+    </div>
+</form>
+</body>
+</html>
