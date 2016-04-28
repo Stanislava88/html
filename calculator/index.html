@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="calcStyle.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+<div class="container-fluid col-md-offset-5 col-md-2">
+    <input type="text" class="form-control  " id="calculatorField" value="0" readonly>
+
+    <button class="btn btn-danger" onclick="deleteSymbol(0)">C</button>
+    <button class="btn btn-danger" onclick="deleteSymbol(1)">CE</button>
+    <br>
+
+    <button class="btn btn-default" onclick="symbol('7')">7</button>
+    <button class="btn btn-default" onclick="symbol('8')">8</button>
+    <button class="btn btn-default" onclick="symbol('9')">9</button>
+    <button class="btn btn-default" onclick="calculate();symbol('/');">/</button>
+
+    <button class="btn btn-default" onclick="symbol('4')">4</button>
+    <button class="btn btn-default" onclick="symbol('5')">5</button>
+    <button class="btn btn-default" onclick="symbol('6')">6</button>
+    <button class="btn btn-default" onclick="calculate();symbol('*');">x</button>
+
+    <button class="btn btn-default" onclick="symbol('1')">1</button>
+    <button class="btn btn-default" onclick="symbol('2')">2</button>
+    <button class="btn btn-default" onclick="symbol('3')">3</button>
+    <button class="btn btn-default" onclick="calculate();symbol('-');">-</button>
+
+    <button class="btn btn-default" onclick="symbol('0')">0</button>
+    <button class="btn btn-default" onclick="calculate();symbol('+')">+</button>
+    <button class="btn btn-success" id="equals" onclick="calculate()">=</button>
+
+</div>
+</body>
+</html>
