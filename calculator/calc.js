@@ -20,7 +20,13 @@ function deleteSymbol(numberOfSymbols) {
 
 function calculate(){
     var field = document.getElementById("calculatorField");
-    if(field.value.length==0){
+    var fieldValue = field.value;
+    var fieldLength = fieldValue.length-1;
+    var lastChar = fieldValue.charAt(fieldLength);
+    if(lastChar=="+"||lastChar=="-"||lastChar=="/"||lastChar=="*"){
+        field.value=fieldValue.slice(0, fieldValue.length-1);
+    }
+    else if(fieldLength==0){
         field.value=0;
     }else {
         field.value = eval(field.value);
