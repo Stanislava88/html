@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraction</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+<div class="row">
+    <div class="col-lg-offset-4 col-lg-4" style="margin-top: 20px;">
+        <div class="input-group" id="fractionGroup">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="validateFraction();">Validate</button>
+      </span>
+            <input type="text" class="form-control" id="fraction" placeholder="fraction">
+        </div>
+        <span id="fractionHelp" class="help-block" style="display: none;">Fraction must be 10 digits before"."/"," and 5 after</span>
+    </div>
+</div>
+
+<script>
+    function validateFraction() {
+        var regex = /^(([0-9]{10}.[0-9]{5})|([0-9]{10},[0-9]{5}))$/;
+        var fractionField = document.getElementById("fraction");
+        var fractionGroup = document.getElementById("fractionGroup");
+        var fractionHelp = document.getElementById("fractionHelp");
+        if (regex.test(fractionField.value)) {
+            fractionGroup.setAttribute("class", "input-group has-feedback has-success");
+            fractionHelp.setAttribute("style", "display: none;");
+        } else {
+            fractionGroup.setAttribute("class", "input-group has-feedback has-error");
+            fractionHelp.setAttribute("style", "display: inline;");
+        }
+
+    }
+</script>
+
+</body>
+</html>
