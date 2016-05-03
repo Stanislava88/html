@@ -1,4 +1,5 @@
-.container-fluid{
+.container-fluid {
+    width: 320px;
     background-color: aliceblue;
     border-style: groove;
     border-radius: 10px;
@@ -8,19 +9,19 @@
     box-shadow: 5px 10px 5px grey;
 }
 
-.btn{
+.btn {
     width: 68px;
     margin-bottom: 10px;
 }
 
-.form-control{
+.form-control {
     margin-bottom: 20px;
 }
 
-#equals{
+#equals {
     width: 140px;
 }
 
-#calculatorField{
+#calculatorField {
     text-align: right;
 }

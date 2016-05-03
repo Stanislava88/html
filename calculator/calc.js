@@ -14,21 +14,21 @@ function deleteSymbol(numberOfSymbols) {
     if (numberOfSymbols == 0) {
         field.value = "";
     } else {
-        field.value = field.value.slice(0, length-1);
+        field.value = field.value.slice(0, length - 1);
     }
 }
 
-function calculate(){
+function calculate() {
     var field = document.getElementById("calculatorField");
     var fieldValue = field.value;
-    var fieldLength = fieldValue.length-1;
+    var fieldLength = fieldValue.length - 1;
     var lastChar = fieldValue.charAt(fieldLength);
-    if(lastChar=="+"||lastChar=="-"||lastChar=="/"||lastChar=="*"){
-        field.value=fieldValue.slice(0, fieldValue.length-1);
+    if (lastChar == "+" || lastChar == "-" || lastChar == "/" || lastChar == "*") {
+        field.value = fieldValue.slice(0, fieldValue.length - 1);
     }
-    else if(fieldLength==0){
-        field.value=0;
-    }else {
+    if (fieldLength == -1) {
+        field.value = 0;
+    } else {
         field.value = eval(field.value);
     }
 }
