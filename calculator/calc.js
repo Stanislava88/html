@@ -3,23 +3,29 @@
  */
 
 
-function symbol(symbol) {
-    var field = document.getElementById("calculatorField");
+function digitPressed(symbol) {
+    var field = document.getElementById("inputField");
     field.value += symbol.toString();
 }
 
-function deleteSymbol(numberOfSymbols) {
-    var field = document.getElementById("calculatorField");
+function operatorPressed(symbol) {
+    calculate();
+    var field = document.getElementById("inputField");
+    field.value += symbol.toString();
+}
+
+function deleteNumberOfSymbols(numberOfSymbols) {
+    var field = document.getElementById("inputField");
     var length = field.value.length;
-    if (numberOfSymbols == 0) {
-        field.value = "";
-    } else {
+    if (numberOfSymbols == 'all') {
+        field.value = "0";
+    } else if (numberOfSymbols == 'one') {
         field.value = field.value.slice(0, length - 1);
     }
 }
 
 function calculate() {
-    var field = document.getElementById("calculatorField");
+    var field = document.getElementById("inputField");
     var fieldValue = field.value;
     var fieldLength = fieldValue.length - 1;
     var lastChar = fieldValue.charAt(fieldLength);
@@ -32,3 +38,4 @@ function calculate() {
         field.value = eval(field.value);
     }
 }
+

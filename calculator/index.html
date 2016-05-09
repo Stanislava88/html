@@ -10,29 +10,29 @@
 </head>
 <body>
 <div class="container-fluid col-md-offset-5 col-md-2">
-    <input type="text" class="form-control  " id="calculatorField" value="0" readonly>
+    <input type="text" class="form-control  " id="inputField" title="inputField" value="0" readonly>
 
-    <button class="btn btn-danger" onclick="deleteSymbol(0)">C</button>
-    <button class="btn btn-danger" onclick="deleteSymbol(1)">CE</button>
+    <button class="btn btn-danger" onclick="deleteNumberOfSymbols('all')">C</button>
+    <button class="btn btn-danger" onclick="deleteNumberOfSymbols('one')">CE</button>
     <br>
 
-    <button class="btn btn-default" onclick="symbol('7')">7</button>
-    <button class="btn btn-default" onclick="symbol('8')">8</button>
-    <button class="btn btn-default" onclick="symbol('9')">9</button>
-    <button class="btn btn-default" onclick="calculate();symbol('/');">/</button>
+    <button class="btn btn-default" onclick="digitPressed('7')">7</button>
+    <button class="btn btn-default" onclick="digitPressed('8')">8</button>
+    <button class="btn btn-default" onclick="digitPressed('9')">9</button>
+    <button class="btn btn-default" onclick="operatorPressed('/');">/</button>
 
-    <button class="btn btn-default" onclick="symbol('4')">4</button>
-    <button class="btn btn-default" onclick="symbol('5')">5</button>
-    <button class="btn btn-default" onclick="symbol('6')">6</button>
-    <button class="btn btn-default" onclick="calculate();symbol('*');">x</button>
+    <button class="btn btn-default" onclick="digitPressed('4')">4</button>
+    <button class="btn btn-default" onclick="digitPressed('5')">5</button>
+    <button class="btn btn-default" onclick="digitPressed('6')">6</button>
+    <button class="btn btn-default" onclick="operatorPressed('*');">x</button>
 
-    <button class="btn btn-default" onclick="symbol('1')">1</button>
-    <button class="btn btn-default" onclick="symbol('2')">2</button>
-    <button class="btn btn-default" onclick="symbol('3')">3</button>
-    <button class="btn btn-default" onclick="calculate();symbol('-');">-</button>
+    <button class="btn btn-default" onclick="digitPressed('1')">1</button>
+    <button class="btn btn-default" onclick="digitPressed('2')">2</button>
+    <button class="btn btn-default" onclick="digitPressed('3')">3</button>
+    <button class="btn btn-default" onclick="operatorPressed('-');">-</button>
 
-    <button class="btn btn-default" onclick="symbol('0')">0</button>
-    <button class="btn btn-default" onclick="calculate();symbol('+')">+</button>
+    <button class="btn btn-default" onclick="digitPressed('0')">0</button>
+    <button class="btn btn-default" onclick="operatorPressed('+')">+</button>
     <button class="btn btn-success" id="equals" onclick="calculate()">=</button>
 
 </div>
