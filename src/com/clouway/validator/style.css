@@ -1,0 +1,17 @@
+fieldset {
+    width: 90%;
+    margin: 5px;
+}
+
+#form {
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.error {
+    background-image: url(option-unchecked.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    display: none;
+}
