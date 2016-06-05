@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#buttons button {
+    float: left;
+    width: 40px;
+    line-height: 30px;
+    margin: 3px;
+    padding: -2%;
+    position: relative;
+    border-radius: 5px;
+}
+
+div #buttons button:active {
+    -webkit-box-shadow: 0px 2px 0px #83261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    position: relative;
+    top: 5px;
+}
+
+.keys {
+    width: 284px;
+    height: 320px;
+    padding: 25px;
+    border: 25px #C0C0C0;
+    border-style: solid ;
+    margin: 100px;
+    margin-left: 300px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#display {
+    width: 188px;
+    height: 35px;
+    border-style: inset;
+    text-align: left;
+    margin-left: 2px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: right;
+}
+
+#reset:active {
+    -webkit-box-shadow: 0px 2px 0px #83261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    position: relative;
+    top: 5px;
+}
+
+#reset {
+    float: right;
+    width: 115px;
+    line-height: 30px;
+    margin: 2px;
+    padding: -5%;
+    position: relative;
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+#ca:active {
+    -webkit-box-shadow: 0px 2px 0px #83261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    position: relative;
+    top: 5px;
+}
+
+#ca {
+    float: right;
+    width: 60px;
+    line-height: 30px;
+    margin: 2px;
+    padding: -5%;
+    position: relative;
+    border-radius: 5px;
+}
+div #buttons #equal {
+    width: 85px;
+    line-height: 32px;
+    margin: 3px;
+    padding: -5%;
+    position: relative;
+    border-radius: 5px;
+    background-color: lightcoral;
+}
+
+
