@@ -12,8 +12,8 @@
 
         <input type="text" class="display" id="display" disabled>
 
-        <button id="reset" type="reset" onclick="addValue('clear')">Clear</button>
-        <button id="ca" type="button" onclick="clearLast()" value="CA">CA</button>
+        <button id="reset" onclick="addValue('clear')">Clear</button>
+        <button id="cl" type="button" onclick="clearLast()">←</button>
         <br><br>
         <div id="buttons">
             <button type="button" onclick="addValue('7')">7</button>
@@ -24,12 +24,12 @@
             <button type="button" onclick="addValue('4')">4</button>
             <button type="button" onclick="addValue('5')">5</button>
             <button type="button" onclick="addValue('6')">6</button>
-            <button type="button" id="x" onclick="addValue('*')">x</button>
+            <button type="button" onclick="addValue('*')">x</button>
 
-            <button type="button" id="one" onclick="addValue('1')">1</button>
-            <button type="button" id="two" onclick="addValue('2')">2</button>
-            <button type="button" id="three" onclick="addValue('3')">3</button>
-            <button type="button" id="-" onclick="addValue('-')">-</button>
+            <button type="button" onclick="addValue('1')">1</button>
+            <button type="button" onclick="addValue('2')">2</button>
+            <button type="button" onclick="addValue('3')">3</button>
+            <button type="button" onclick="addValue('-')">-</button>
 
             <br><br>
             <button type="button" onclick="addValue('0')">0</button>
