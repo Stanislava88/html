@@ -25,7 +25,7 @@ function calculate() {
     if (!isEmpty(field.value) && isDigit(lastElement)) {
         result = eval(field.value);
         
-        if (result == Infinity) {
+        if (!isNaN(result)) {
             field.value = "Can not divide by zero";
         } else {
             field.value = result;
