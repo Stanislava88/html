@@ -1,21 +1,24 @@
 /**
  * Created by Stanislava on 01.06.16.
  */
-function addValue(button) {
+
+function addDigit(button) {
     var field = document.getElementById('display');
 
-    if (isEmpty(field.value)) {
-        if (isDigit(button) && button != 0) {
-            field.value += button;
-        }
-    } else {
-        field.value += button;
+    if (isEmpty(field.value) && button == 0) {
+        return;
     }
-    if (button == 'clear') {
-        field.value = '';
-    }
+    field.value += button;
 }
 
+function addSign(button) {
+    var sign = document.getElementById('display');
+    var lastElement = sign.value.charAt(sign.value.length - 1);
+
+    if (!isEmpty(sign.value) && isDigit(lastElement)) {
+        sign.value += button;
+    }
+}
 
 function calculate() {
     var result;
@@ -24,8 +27,8 @@ function calculate() {
 
     if (!isEmpty(field.value) && isDigit(lastElement)) {
         result = eval(field.value);
-        
-        if (!isNaN(result)) {
+
+        if (!isFinite(result)) {
             field.value = "Can not divide by zero";
         } else {
             field.value = result;
@@ -33,6 +36,12 @@ function calculate() {
     } else {
         field.value = "Error";
     }
+}
+
+function clearAll() {
+    var field = document.getElementById("display");
+
+    field.value = "";
 }
 
 function clearLast() {
@@ -50,6 +59,7 @@ function isEmpty(field) {
         return false;
     }
 }
+
 function isDigit(button) {
     if (button != '/' && button != '*' && button != '+' && button != '-') {
         return true;
