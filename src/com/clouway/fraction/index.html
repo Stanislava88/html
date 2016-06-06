@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraction validator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="fractionValidator.js"></script>
+</head>
+<body>
+<div class="fractions">
+    <h1>Fraction validator</h1>
+    <input id="fraction" required>
+    <button onclick="isFraction('fraction')">Validate</button>
+    <br>
+    <div id="message">
+        <div class="error">The valid fraction contains max 10 digits in whole piece and 5 in fractional
+            separated by dot<br>
+            <span>This fraction is not valid!</span>
+        </div>
+        <div class="success">This fraction is valid!!!</div>
+    </div>
+</div>
+</body>
+</html>

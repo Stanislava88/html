@@ -1,0 +1,29 @@
+.fractions h1 {
+    color: darkred;
+}
+
+.fractions #fraction {
+    border-style: solid;
+    border-color: darkgreen;
+}
+
+.error {
+    display: none;
+}
+
+.success {
+    display: none;
+    color: green;
+}
+
+.invalid .error {
+    display: inline;
+}
+
+span {
+    color: red;
+}
+
+.valid .success {
+    display: inline;
+}
