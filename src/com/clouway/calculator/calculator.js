@@ -61,7 +61,9 @@ function isEmpty(field) {
 }
 
 function isDigit(button) {
-    if (button != '/' && button != '*' && button != '+' && button != '-') {
+    var pattern = /[(/|*|+|\-)]/;
+
+    if (!pattern.test(button)) {
         return true;
     } else {
         return false;
