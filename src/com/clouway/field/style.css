@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetic;
+}
+
+.information {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+p#demo {
+    color: red;
+}
+
+input:invalid, textarea:invalid {
+   border: 1px solid red;
+}
+
+input:valid,textarea:valid{
+    border: 1px solid green;
+}
