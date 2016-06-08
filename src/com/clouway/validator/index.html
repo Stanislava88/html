@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormValidation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validator.js"></script>
+</head>
+<body>
+<div id="form">
+    <form action="" name="form">
+        <fieldset>
+            <legend>User Information</legend>
+            <div>
+                First Name:<br>
+                <input type="text" id="fName" placeholder="enter first name"
+                       onblur="validateMatching('fName',/^[A-Za-z ]{1,15}$/)"><br>
+                <span id="fNameError" class="error">The name must contain between 1 and 15 letters</span>
+            </div>
+
+            <div>
+                Last Name:<br>
+                <input type="text" id="lName" placeholder="enter last name"
+                       onblur="validateMatching('lName',/^[A-Za-z ]{1,15}$/)"><br>
+                <span id="lNameError" class="error">The name must contain between 1 and 15 letters</span>
+            </div>
+
+            <div>
+                EGN:<br>
+                <input type="number" id="egn" placeholder="enter egn"
+                       onblur="validateMatching('egn',/^[0-9 ]{10}$/)"><br>
+             <span id="egnError" class="error">The egn must contain exactly 10 digits
+            </span>
+            </div>
+            <div>
+                Age:<br>
+                <input type="number" id="age" placeholder="enter age"
+                       onblur="inRange('age', 18,118)"><br>
+            <span id="ageError" class="error">Valid age are between 18 and 118
+            </span>
+            </div>
+
+            <div>
+                Address:<br>
+                <input type="text" id="address" placeholder="enter address"
+                       onblur="validateMatching('address',/^[A-Za-z0-9]{1,100}$/)"><br>
+              <span id="addressError" class="error">The address must contains between 1 to 100 symbols
+            </span>
+            </div>
+
+            Password:<br>
+            <input type="password" id="password" placeholder="enter password"
+                   onblur="validateMatching('password',/^[A-Za-z0-9]{6,18}$/)"><br>
+            <span id="passwordError" class="error">The password
+                must contains between 6 and 18 latin letters and digits
+            </span>
+
+            Confirm password:<br>
+            <input type="password" id="confirm" placeholder="confirm password"
+                   onblur="validateEquality('confirm','password')"><br>
+            <span id="confirmError" class="error">The password
+                does not match
+            </span>
+
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
